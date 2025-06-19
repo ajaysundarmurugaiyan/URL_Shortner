@@ -1,0 +1,77 @@
+/* App.css - Enhanced for a beautiful modern UI */
+
+body {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
+  min-height: 100vh;
+}
+
+h1 {
+  background: linear-gradient(90deg, #2563eb 40%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+input[type="url"] {
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+  border: 1.5px solid #c7d2fe;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+input[type="url"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #93c5fd;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #2563eb 40%, #06b6d4 100%);
+  font-weight: 600;
+  letter-spacing: .02em;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+button[type="submit"]:hover:not(:disabled) {
+  background: linear-gradient(90deg, #1e40af 40%, #0e7490 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.short-url-container {
+  animation: fadeIn 0.7s cubic-bezier(.4,0,.2,1);
+  border-radius: 0.75rem;
+  background: linear-gradient(90deg, #f1f5f9 60%, #e0e7ff 100%);
+  box-shadow: 0 4px 24px rgba(37, 99, 235, 0.07);
+  padding: 1.5rem 1rem 1rem 1rem;
+  margin-top: 2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+
+.short-url-link {
+  color: #2563eb;
+  font-size: 1.1rem;
+  font-weight: 600;
+  word-break: break-all;
+  transition: color 0.2s;
+}
+.short-url-link:hover {
+  color: #0e7490;
+  text-decoration: underline;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.05);
+}
